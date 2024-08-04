@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness&Feeding/Plans</title>
+  <!-- main file css -->
+  <link rel="stylesheet" href="../css/master.css" />
+  <link rel="stylesheet" href="../css/all.min.css" />
+<style>.container-plans {
+  background-image: url(../images/BackGround.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: auto;
+  
+}
+.footer-content {
+  padding: 30px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000;
+  position: relative;
+  bottom: 0;
+}
+.plans-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+  padding: 25px;
+  margin: 0 auto;
+  padding-top: 90px;
+  min-height: 80vh;
+}
+</style>
+</head>
+
+<body>
+  <!--make header for plan page-->
+  <div class="header-home">
+    <div class="logo-home">
+      <img src="../images/dambel.png" class="home-logo" alt="Error in photo">
+    </div>
+    <div class="title-home">
+      Fitness & Feeding
+    </div>
+    <a href="/pages/home-page.html" class="link-home">Home</a>
+    <a href="service-page.html" class="link-home">Service</a>
+    <a href="plans-page.html" class="link-home">Plans</a>
+    <a href="/pages/about.html" class="link-home">About</a>
+    <a href="/pages/Profile.html" class="link-home">profile</a>
+    <button class="sign-home" onclick="iconfirm()">Log Out</button>
+  </div>
+  <!--end the header for plan page-->
+
+  <!--start box fiels-->
+  <div class="container-plans">
+    <div class="plans-content">
+      <div class="box-plans">
+        <div class="image">
+          <img src="../images/run.webp" alt="Error in photo" />
+        </div>
+        <div class="plan-title">gym tips <span style="color: blue;"><br>(free)</span></div>
+
+        <ul class="plans-content-list">
+          <li><i class="fa-solid fa-check"></i> tips for feedings</li>
+          <li><i class="fa-solid fa-check"></i> tips for exercise</li>
+          <li><i class="fa-solid fa-check"></i> tips for food Supplements</li>
+        </ul>
+        <div class="button-join" onclick="tips_btn()">Join Now</div>
+      </div>
+      <div class="box-plans">
+        <div class="image">
+          <img src="../images/dambel-2.jpg" alt="Error in photo" />
+        </div>
+        <div class="plan-title">Feeding & Exercise <span style="color: blue;">(private)</span> 3 month</div>
+        <ul class="plans-content-list">
+          <li><i class="fa-solid fa-check"> </i> Exercise System</li>
+          <li><i class="fa-solid fa-check"> </i> Feeding System</li>
+          <li><i class="fa-solid fa-check"> </i> contact with trainer</li>
+        </ul>
+        <div class="button-join" onclick="btnplanmonth()">Join Now</div>
+        <!-- <div class="button-join" onclick="home_private3month()">Join Now</div> -->
+      </div>
+      <div class="box-plans">
+        <div class="image">
+          <img src="../images/eat-exe.jpg" alt="Error in photo" />
+        </div>
+        <div class="plan-title"> Feeding & exercise <span style="color: blue;">(private)</span> 12 month</div>
+        <ul class="plans-content-list">
+          <li><i class="fa-solid fa-check"></i> Exercise system</li>
+          <li><i class="fa-solid fa-check"></i> Feeding system</li>
+          <li><i class="fa-solid fa-check"></i> Contact With Trainer</li>
+        </ul>
+        <div class="button-join" id="btnplanyear">Join Now</div>
+        <!-- <div class="button-join" onclick="inbody_btn()">Join Now</div> -->
+      </div>
+    </div>
+
+    <!--start make footer-->
+    <div class="footer-content" style="background-color: black;" style="color: #fff;">
+      <div class="footer-content-one">
+        <h1>Get in touch</h1>
+        <p>the quick fox jump over the lazy dog</p>
+        <br>
+        <div class="footer-icon">
+          <a href="" style="color: blue;"><i class="fa-brands fa-facebook"></i></a>
+          <a href="" style="color: yellow;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="" style="color: blueviolet;"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-content-two">
+        <h1>company info</h1>
+        <p><a href="">about us</a></p>
+        <p><a href="">contact us</a></p>
+        <p><a href="">we are hiring</a></p>
+        <p><a href="">blog</a></p>
+      </div>
+      <div class="footer-content-three">
+        <h1>feature</h1>
+        <p>busnies marketing</p>
+        <p>user anslystic</p>
+        <p>live chat</p>
+        <p>unlimited support</p>
+      </div>
+    </div>
+    <!--end make footer-->
+  </div>
+  <!--end box fiels-->
+
+  
+  <script>
+    const userId = localStorage.getItem("user"); 
+    const id = JSON.parse(userId).id
+    const token = JSON.parse(userId).token
+    console.log
+    document.addEventListener('DOMContentLoaded', function() {
+      var button = document.getElementById('btnplanyear');
+      if (button) {
+          button.addEventListener('click', btn_loginpayment);
+      } else {
+          console.error('Button element not found');
+      }
+  });
+
+  function btn_loginpayment() {
+      var data = {
+          price: "100",
+          plane: "oneyear"
+      };
+
+      fetch(`https://graduation-project-2q7g.onrender.com/api/v1/user/payment/${id}`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(result => {
+          if (result.status === 'success' && result.session) {
+             window.open(result.session);
+          } else {
+              console.error('Failed to process payment:', result);
+          }
+      })
+
+      .catch(error => {
+          console.error('Error occurred during payment:', error);
+      });
+      
+     
+  }
+  /////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../file.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete user</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+<body>
+    <div id="container">
+        <div id="signpage">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="../images/dambel.png" alt="Error in load photo" width="70px" height="70px">
+                </div>
+                <div class="title">Fitness & Feeding System</div>
+            </div>
+            <div id="signin-box">
+                <div id="content-signheader">
+                    <div id="sign-header1">
+                        <p style="margin-bottom: 10px;"> <span id="backuser">Fitness & Feeding</span></p>
+            
+                        <div class="sign-title" style="font-size: 1rem;">Do you need delete your account?</div>
+                    </div>
+                </div>
+                    <div class="sign-input">
+                        <br>
+                        <div class="ssubmit" style="display: flex;">
+                            <button class="sign-home" id="deluser">YES</button>
+                            <button id="canceldel" onclick="canceldeluser()" >NO</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../file.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+</body>
+</html>

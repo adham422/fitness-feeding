@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/normaliz.css">
+  
+  <link rel="stylesheet" href="../css/all.min.css" />
+  <!-- Font Awesome -->
+  <!-- <link rel="stylesheet" href="../css/master.css" /> -->
+  <style>
+    /* Start global */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ////////////////////////////// */
+body {
+  height: 100vh;
+  background-color: white;
+}
+
+.head-side-s {
+  width: 75px;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.container-head {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.login-icon-center {
+  font-size: 20px;
+  color: #d0fd3e;
+}
+
+.login-icon {
+  font-size: 20px;
+  color: #d0fd3e;
+  transition: 0.2s;
+}
+
+.login-icon:hover {
+  background-color: #d0fd3e;
+  border-radius: 50%;
+  color: black;
+}
+
+.active-icon {
+  background-color: #d0fd3e;
+  border-radius: 50%;
+  color: black;
+}
+
+.head-side-info,
+.head-side-info a {
+  width: 150px;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.76);
+  color: rgba(0, 0, 0, 0.699);
+  font-weight: 800;
+  font-size: 18px;
+  transition: 0.2s;
+}
+#deluser{
+  width: 150px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: rgba(0, 0, 0, 0.699);
+  font-weight: 800;
+  font-size: 18px;
+  transition: 0.2s;
+  position: relative;
+  text-decoration: underline;
+}
+@media (max-width: 991px) {
+  
+}
+
+.login-info {
+  transition: 0.2s;
+}
+
+.login-info:hover {
+  color: black;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.active-info {
+  color: black;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.page {
+  width: 100%;
+}
+
+.setting-icon {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.setting-icon i {
+  padding: 15px;
+  font-size: 23px;
+}
+
+.setting-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.edit-page {
+  width: 80%;
+  margin: auto;
+}
+
+.edit-p {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.head-edit {
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.icon-image {
+  width: 40px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.icon-image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.name {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.name .first {
+  display: flex;
+  margin-bottom: 15px;
+  flex-direction: column;
+  width: 48%;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.name-info {
+  border-radius: 6px;
+  height: 40px;
+  padding: 5px;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input {
+  border-radius: 6px;
+  height: 40px;
+  padding: 5px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.number {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.home {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.home .city {
+  display: flex;
+  margin-bottom: 15px;
+  flex-direction: column;
+  width: 48%;
+}
+
+.home .city-info,
+.state-info {
+  border-radius: 6px;
+  height: 40px;
+  padding: 5px;
+}
+
+.btn-info {
+  display: flex;
+  width: 140px;
+  margin: auto;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+.btn-cancel {
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.btn-save {
+  padding: 8px;
+  background-color: greenyellow;
+  border: 1px solid greenyellow;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-cancel:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: green;
+}
+
+/* Forced Colors Mode */
+@media (forced-colors: active) {
+  .head-side-s,
+  .head-side-info,
+  .login-icon,
+  .login-info {
+    forced-color-adjust: auto;
+  }
+
+  body {
+    background-color: Canvas;
+  }
+
+  .head-side-s {
+    background-color: CanvasText;
+  }
+
+  .head-side-info,
+  .login-info {
+    color: CanvasText;
+  }
+
+  .login-icon:hover,
+  .active-icon {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+
+  .active-info {
+    color: HighlightText;
+  }
+}
+
+  </style>
+  <title>Profile</title>
+</head>
+
+<body>
+  <div class="container-head">
+    <div class="head-side-s">
+      <div class="login-icon-center">
+        <i class="fa-solid fa-dumbbell"></i>
+      </div>
+      <div class="login-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <div class="login-icon"><i class="fa-solid fa-unlock-keyhole"></i></div>
+      <div class="login-icon"><i class="fa-solid fa-table-list"></i></div>
+      <div class="login-icon"><i class="fa-solid fa-circle-info"></i></div>
+      <div class="login-icon"><i class="fa-solid fa-question"></i></div>
+      <div class="login-icon"><i class="fa-solid fa-flag"></i></div>
+      <div class="login-icon"><i class="fa-solid fa-house"></i></div>
+      <div class="login-icon active-icon">
+        <i class="fa-solid fa-gear"></i>
+      </div>
+    </div>
+    <div class="head-side-info">
+      <a href="">
+        <div class="login-info active-info">Settings</div>
+      </a>
+      <a href="">
+        <div class="login-info">Edit profile</div>
+      </a>
+      <a href="../pages/changepasswrd.html">
+        <div class="login-info">change password</div>
+      </a>
+      <a href="/pages/privecypage.html">
+        <div class="login-info">Privacy Policy</div>
+      </a>
+      
+     
+      <a href="">
+        <div class="login-info">Report a problem</div>
+      </a>
+      <a href="">
+        <div class="login-info">help</div>
+      </a>
+      <a href="../pages/deleteuser.html">
+        <div class="login-info" >delete user</div>
+      </a>
+    </div>
+    <div class="page">
+      <div class="setting-icon">
+        <i class="fa-solid fa-bell"></i>
+        <img src="../images/tie.jpeg" alt="Error in photo" />
+      </div>
+      <div class="edit-page">
+        <div class="edit-p">
+          <h3 class="head-edit" style="color: black;">Edit profile</h3>
+          <div class="icon-image">
+            <img src="/images/tie.jpg" alt="Error in photo" />
+          </div>
+        </div>
+        <form id="profileForm">
+          <div class="name">
+            <div class="first">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" class="name-info" required/>
+            </div>
+            <div class="first">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" class="name-info" required />
+            </div>
+          </div>
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="input" required />
+          </div>
+          <div class="address">
+            <label for="address">Address</label>
+            <input type="text" id="address" class="input" />
+          </div>
+          <div class="number">
+            <label for="number">Number</label>
+            <input type="number" id="number" class="input" required />
+          </div>
+          <div class="home">
+            <div class="city">
+              <label for="city">City</label>
+              <input type="text" id="city" class="city-info" />
+            </div>
+            <div class="city">
+              <label for="state">State</label>
+              <input type="text" id="state" class="state-info" />
+            </div>
+          </div>
+        </form>
+        <div class="btn-info">
+          <div class="btn btn-cancel" id="cancelBtn">Reset</div>
+          <div class="btn btn-save" id="saveBtn">save</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+  // Function to load data from localStorage
+  function loadData() {
+    document.getElementById('first-name').value = localStorage.getItem('firstName') || '';
+    document.getElementById('last-name').value = localStorage.getItem('lastName') || '';
+    document.getElementById('email').value = localStorage.getItem('email') || '';
+    document.getElementById('address').value = localStorage.getItem('address') || '';
+    document.getElementById('number').value = localStorage.getItem('number') || '';
+    document.getElementById('city').value = localStorage.getItem('city') || '';
+    document.getElementById('state').value = localStorage.getItem('state') || '';
+  }
+
+  // Function to save data to localStorage and show success message
+// Function to save data to localStorage and show success message
+function saveData() {
+  // Check if any of the fields have data
+  const firstName = document.getElementById('first-name').value;
+  const lastName = document.getElementById('last-name').value;
+  const email = document.getElementById('email').value;
+  const address = document.getElementById('address').value;
+  const number = document.getElementById('number').value;
+  const city = document.getElementById('city').value;
+  const state = document.getElementById('state').value;
+
+  // Save data to localStorage
+  localStorage.setItem('firstName', firstName);
+  localStorage.setItem('lastName', lastName);
+  localStorage.setItem('email', email);
+  localStorage.setItem('address', address);
+  localStorage.setItem('number', number);
+  localStorage.setItem('city', city);
+  localStorage.setItem('state', state);
+
+  // Display success message using Swal.fire if there's data
+  if (firstName || lastName || email || address || number || city || state) {
+    Swal.fire({
+      icon: 'success',
+      title: 'تم حفظ البيانات بنجاح',
+      showConfirmButton: false,
+      timer: 1500 // 1.5 seconds
+    });
+  }
+
+  // Change save button text to update and enable it
+  const saveBtn = document.getElementById('saveBtn');
+  if (firstName || lastName || email || address || number || city || state) {
+    saveBtn.innerText = 'Update';
+  } else {
+    saveBtn.innerText = 'Save';
+  }
+  saveBtn.removeAttribute('disabled');
+}
+
+  // Function to clear form fields and localStorage
+  function clearForm() {
+    document.getElementById('profileForm').reset();
+    // Clear localStorage
+    localStorage.removeItem('firstName');
+    localStorage.removeItem('lastName');
+    localStorage.removeItem('email');
+    localStorage.removeItem('address');
+    localStorage.removeItem('number');
+    localStorage.removeItem('city');
+    localStorage.removeItem('state');
+    
+    loadData(); // Reload empty data into form fields
+
+    // Change update button text back to save and disable it until changes are made
+    document.getElementById('saveBtn').innerText = 'Save';
+    document.getElementById('saveBtn').setAttribute('disabled', 'disabled');
+  }
+
+  // Load data when the page loads
+  window.onload = loadData;
+
+  // Save data when the save button is clicked
+  document.getElementById('saveBtn').addEventListener('click', saveData);
+
+  // Enable the save button when changes are made
+  document.getElementById('profileForm').addEventListener('input', function() {
+    document.getElementById('saveBtn').removeAttribute('disabled');
+  });
+
+  // Cancel changes and clear all data when the cancel button is clicked
+  document.getElementById('cancelBtn').addEventListener('click', clearForm);
+
+
+
+
+   
+</script>
+
+
+</body>
+
+</html>

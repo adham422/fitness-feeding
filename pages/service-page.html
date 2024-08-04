@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness&Feeding/services</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+        #service-gallery span a,
+        #service-gallery1 span a,
+        #service-gallery2 span a {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            align-self: center;
+            color: yellow;
+            margin: -5px auto;
+            background-color: #4D4D4D;
+            height: 50px;
+            border-radius: 0px 0px 20px 20px;
+            position: relative;
+            top: -10px;
+            text-transform: capitalize;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="services-container">
+        <!--make header for services page-->
+        <div class="header-home">
+            <div class="logo-home">
+                <img src="../images/dambel.png" class="home-logo" alt="Error in photo">
+            </div>
+            <div class="title-home">
+                Fitness & Feeding
+            </div>
+            <a href="/pages/home-page.html" class="link-home">Home</a>
+            <a href="service-page.html" class="link-home">Service</a>
+            <a href="plans-page.html" class="link-home">Plans</a>
+            <a href="/pages/about.html" class="link-home">About</a>
+            <a href="/pages/Profile.html" class="link-home">profile</a>
+            <button class="sign-home" onclick="iconfirm()">Log Out</button>
+        </div>
+        <!--end the header for services page-->
+
+        <!-- start services contenet -->
+        <div class="service-feeding">
+            <div class="service-header">
+                <div class="service-header-title">feedings</div>
+                <button class="service-header-btn" onclick="feeding_btn()">Click here</button>
+            </div>
+            <div class="gallery-content">
+                <div class="gallery-wrap">
+                    <img src="../images/back.png" class="backBtn" alt="Error in photo">
+                    <div class="gallery" id="service-gallery">
+                        <div>
+                            <span><img src="../images/service1.png" alt="Error in photo"><a href="../pages/plans-page.html">private system</a></span>
+                            <span><img src="../images/service2.png" alt="Error in photo"><a href="../pages/dry-page.html">drying system</a></span>
+                            <span><img src="../images/service3.png" alt="Error in photo"><a href="../pages//bulking-page.html">Bulking Up System</a></span>
+                        </div>
+                        <div>
+                            <span><img src="../images/service4.png" alt="Error in photo"><a href="../pages/lose-page.html">Loss Weight System </a></span>
+                            <span><img src="../images/service5.png" alt="Error in photo"><a href="../pages/protin-page.html">protin source</a></span>
+                            <span><img src="../images/service1.png" alt="Error in photo"><a href="../pages/carb-page.html">carb source</a></span>
+                        </div>
+
+                    </div>
+                    <img src="../images/next.png" class="nextBtn" alt="Error in photo">
+                </div>
+            </div>
+        </div>
+        <!-- end services contenet -->
+        <!-- start services contenet -->
+        <div class="service-feeding">
+            <div class="service-header">
+                <div class="service-header-title">Personal Training</div>
+                <button class="service-header-btn" onclick="personal_training()">Click here</button>
+            </div>
+            <div class="gallery-content">
+                <div class="gallery-wrap">
+                    <img src="../images/back.png" class="backBtn" alt="Error in photo">
+                    <div class="gallery" id="service-gallery1">
+                        <div>
+                            <span><img src="../images/service2-1.png" alt="Error in photo"><a href="../pages/plans-page.html">private exercises</a></span>
+                            <span><img src="../images/service2-2.png" alt="Error in photo"><a href="../pages/Driying-exe.html">Drying Exercises</a></span>
+                            <span><img src="../images/service2-3.png" alt="Error in photo"><a href="../pages/Bulking up-exe.html">Bulking Up Exercises</a></span>
+                        </div>
+                        <div>
+                            <span><img src="../images/service2-4.png" alt="Error in photo"><a href="../pages/cardio-page.html">Loss Weight Systems</a></span>
+                            <span><img src="../images/service2-5.png" alt="Error in photo"><a href="../pages/Driying-exe.html">Drying Exercises</a></span>
+                            <span><img src="../images/service2-3.png" alt="Error in photo"><a href="../pages/Bulking up-exe.html">Bulking Up Exercises</a></span>
+                        </div>
+
+                    </div>
+                    <img src="../images/next.png" class="nextBtn" alt="Error in photo">
+                </div>
+            </div>
+        </div>
+        <!-- end services contenet -->
+        <!-- start services contenet -->
+        <div class="service-feeding">
+            <div class="service-header">
+                <div class="service-header-title">Food Supplements</div>
+                <button class="service-header-btn" onclick="gosupplyment()">Click here</button>
+            </div>
+            <div class="gallery-content">
+                <div class="gallery-wrap">
+                    <img src="../images/back.png" class="backBtn" alt="Error in photo">
+                    <div class="gallery" id="service-gallery2">
+                        <div>
+                            <span><img src="../images/service3-1.png" alt="Error in photo"><a href="../pages/sup-protin.html">protin</a></span>
+                            <span><img src="../images/service3-2.png" alt="Error in photo"><a href="../pages/sup-creatine.html">Creatine</a></span>
+                            <span><img src="../images/service3-3.png" alt="Error in photo"><a href="../pages/sup-multivitamins.html">Vitamins</a></span>
+                        </div>
+                        <div>
+                            <span><img src="../images/service3-1.png" alt="Error in photo"><a href="../pages/sup-protin.html">protin</a></span>
+                            <span><img src="../images/service3-2.png" alt="Error in photo"><a href="../pages/sup-creatine.html">Creatine</a></span>
+                            <span><img src="../images/service3-3.png" alt="Error in photo"><a href="../pages/sup-multivitamins.html">Vitamins</a></span>
+                        </div>
+
+                    </div>
+                    <img src="../images/next.png" class="nextBtn" alt="Error in photo">
+                </div>
+            </div>
+        </div>
+        <!-- end services contenet -->
+        <!--start make footer-->
+        <div class="footer-content" style="background-color: black;" style="color: #fff;">
+            <div class="footer-content-one">
+                <h1>Get in touch</h1>
+                <p>the quick fox jump over the lazy dog</p>
+                <br>
+                <div class="footer-icon">
+                    <a href="" style="color: blue;"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" style="color: yellow;"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" style="color: blueviolet;"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-content-two">
+                <h1>company info</h1>
+                <p><a href="">about us</a></p>
+                <p><a href="">contact us</a></p>
+                <p><a href="">we are hiring</a></p>
+                <p><a href="">blog</a></p>
+            </div>
+            <div class="footer-content-three">
+                <h1>feature</h1>
+                <p>busnies marketing</p>
+                <p>user anslystic</p>
+                <p>live chat</p>
+                <p>unlimited support</p>
+            </div>
+        </div>
+        <!--end make footer-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../file.js"></script>
+
+
+
+
+    </script>
+</body>
+
+</html>

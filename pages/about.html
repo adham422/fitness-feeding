@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Gym App</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/master.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+           
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77a1d3 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        .showcase {
+            min-height: 400px;
+            background: url('gym-background.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .showcase p {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background: #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: yellow !important;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            margin: 0;
+            
+            color: #fff !important;
+        }
+
+        .team-member p {
+            color: yellow !important;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+     <!--make header for plan page-->
+  <div class="header-home">
+    <div class="logo-home">
+      <img src="../images/dambel.png" class="home-logo" alt="Error in photo">
+    </div>
+    <div class="title-home">
+      Fitness & Feeding
+    </div>
+    <a href="/pages/home-page.html" class="link-home">Home</a>
+    <a href="service-page.html" class="link-home">Service</a>
+    <a href="plans-page.html" class="link-home">Plans</a>
+    <a href="/pages/about.html" class="link-home">About</a>
+    <a href="/pages/Profile.html" class="link-home">profile</a>
+    <button class="sign-home" onclick="iconfirm()">Log Out</button>
+  </div>
+  <!--end the header for plan page-->
+
+    <section class="showcase">
+        <div class="container">
+            <h1 style=" color: yellow !important;">About Our Gym App</h1>
+            <br>
+            <p>Welcome to our Gym App. Our mission is to help you stay fit and healthy.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="../images/teamm.JPG" alt="Team Member 1">
+                    <h3>said ahmed</h3>
+                    <br>
+                    <p>Ui &ux</p>
+                </div>
+                <div class="team-member">
+                    <img src="../images/teamm.JPG" alt="Team Member 1">
+                    <h3>Adham Elsayed<br>mohamed hammad</h3>
+                    <p>front end</p>
+                </div>
+                <div class="team-member">
+                    <img src="../images/teamm.JPG" alt="Team Member 1">
+                    <h3>ahmed hammad<br>mohamed hassan</h3>
+                    <p>back end</p>
+                </div>
+                <div class="team-member">
+                    <img src="../images/teamm.JPG" alt="Team Member 1">
+                    <h3>salah swidan<br>
+                         omar hesham</h3>
+                    <p>flutter</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Gym App &copy; 2024</p>
+    </footer>
+    <script src="../file.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

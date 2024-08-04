@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>private-Home</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+        .home-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            width: 80%;
+            margin: 20px auto;
+            background-image: none !important; 
+            background-repeat: no-repeat;
+            background-size: auto;
+            gap: 25px;
+        }
+        .private-container-home {
+           padding:35px;
+           line-height: 40px;
+        }
+        .private-container-home button{
+            background: none;
+            padding: 10px;
+            color: var(--white);
+            border: 1px solid var(--main_color);
+            text-transform: capitalize;
+            font-weight: 800;
+            width: auto;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .private-container-home button:hover{
+            background-color: var(--main_color);
+            color: #000;
+            transition: 0.5;
+        }
+        @media (max-width:600px) {
+            .home-content {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                width: 80%;
+                margin: 20px auto;
+                background-image: none !important;
+                background-repeat: no-repeat;
+                background-size: auto;
+                gap: 25px;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- start header all page -->
+    <div class="container-home" id="homeprivate" >
+        <!-- start make header -->
+        <div class="header-home">
+            <div class="logo-home">
+                <img src="../images/dambel.png" class="home-logo" alt="Error in photo">
+            </div>
+            <div class="title-home">
+                Fitness & Feeding
+            </div>
+            <a href="/pages/private-home.html" class="link-home">Home</a>
+            <a href="service-page.html" class="link-home">Service</a>
+            <a href="plans-page.html" class="link-home">Plans</a>
+            <a href="/pages/about.html" class="link-home">About</a>
+            <a href="/pages/Profile.html" class="link-home">profile</a>
+            <a href="/pages/home-page.html" class="link-home">puplic Home</a>
+            <a href="/pages/stopWatch.html" class="link-home">stop watch</a>
+            <button class="sign-home" onclick="iconfirm()">Log Out</button>
+        </div>
+        <!-- end make header -->
+        <!-- end header all page -->
+        <br>
+            <div class="small-header">
+                <div><a href="/pages/protin-calc.html">protin calculate</a></div>
+                <div><a href="/pages/calorie-calc.html">carb calculate</a></div>
+                <div><a href="/pages/BMI-calc.html">BMI calculate</a></div>
+                <div><a href="/pages/calorie-calc.html">calory calculate</a></div>
+            </div>
+            <br>
+        <!-- start make content of home page -->
+
+            <div class="private-container-home" style="color: #fff;">
+                <button id="fetchDataButton">plan for your body</button>
+                <p>welcome, this app recomended for your body <span id="planyear" style="color: yellow;font-weight:800">bulking up to gain weight.</span></p>
+                <button type="button" class="rec-bulking" onclick="btn_bulking_feeding_private()">bullking up (12month)</button>
+                <button type="button" class="rec-drying" onclick="btn_drying_feeding_private()">drying (12month)</button>
+                <p>you need <span id="protin_year" style="color: yellow;font-weight:800" >200</span> protin daily</p>
+                <p>you need <span id="calory_year" style="color: yellow;font-weight:800" >200</span> calory daily</p>
+                <p>you need <span id="carb_year" style="color: yellow;font-weight:800" >200</span> carb daily</p>
+                
+            </div>
+
+        <h1 class="top-title">a healthy mind in a healthy body</h1>
+        
+        <div class="home-content" style="color: white;">
+            <div class="home-content-box-1">
+                <img src="../images/feed.png" alt="Error in photo" width="400px" height="300px">
+            </div>
+            <div class="home-content-box-2">
+                <h1>bulking-up-feeding<p style="color: yellow;">(12 month)</p>
+                </h1>
+                <p>
+                    Bodybuilders typically follow structured workout routines and nutrition plans tailored to their goals, often
+                    ncluding high-protein diets and supplements to support muscle growth and recovery. Competitive
+                    bodybuilding involves posing routines and is judged on factors such as muscle size, symmetry, and conditioning.
+                </p>
+                <br>
+                <button class="home-button" onclick="btn_bulking_feeding_private()">Click here</button>
+            </div>
+
+            <div class="home-content-box-3">
+                <h1 class="box4-title">bulking-up-exercises<p style="color: yellow;">(12 month)</p>
+                </h1>
+                <p>
+                    Bodybuilding is a form of physical exercise involving the development of muscle hypertrophy through specific types of
+                    resistance training, typically using free weights, machines, or bodyweight exercises. The goal of
+                    bodybuilding is to build and sculpt a muscular physique, often emphasizing symmetry, proportion, and definition
+                </p>
+                <br>
+                <button class="home-button" onclick="bulking_exe_pri36()">Click here</button>
+            </div>
+
+            <div class="home-content-box-4">
+                <img src="../images/ss.png" alt="Error in photo" width="400px" height="300px">
+            </div>
+
+            <div class="home-content-box-5">
+                <img src="../images/dry-bg.png" alt="Error in photo" width="400px" height="300px">
+            </div>
+
+            <div class="home-content-box-6">
+                <h1 class="box5-title"> drying-feeding<p style="color: yellow;">(12 month)</p>
+                </h1>
+                <p>
+                    This system provides you with special diet,
+                    and nutritional supplements suitable for the player to loss weigth and fats.
+                </p>
+                <br>
+                <button class="home-button" onclick="btn_drying_feeding_private()">Click here</button>
+            </div>
+
+            <div class="home-content-box-7">
+                <h1 class="box4-title">drying-exercise<p style="color: yellow;">(12month weeks)</p>
+                </h1>
+                <p>
+                    Bodybuilding is a form of physical exercise involving the development of muscle hypertrophy through specific types of
+                    resistance training, typically using free weights, machines, or bodyweight exercises. The goal of
+                    bodybuilding is to build muscles and lose fats in your body. 
+                </p>
+                <br>
+                <button class="home-button" onclick="drying_exe_pri36()">Click here</button>
+            </div>
+
+            <div class="home-content-box-8">
+                <img src="../images/WhatsApp Image 2023-12-23 at 6.31.42 PM.jpeg" alt="Error in photo" width="400px" height="300px">
+            </div>
+        </div>
+
+       <!--start make footer--------------static for all page-->
+    <div class="footer-content" id="trainFooter" style="color: #fff;">
+        <div class="footer-content-one">
+            <h1>Get in touch</h1>
+            <p>the quick fox jump over the lazy dog</p>
+            <br>
+            <div class="footer-icon">
+                <a href="" style="color: blue;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" style="color: yellow;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" style="color: blueviolet;"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-content-two">
+            <h1>company info</h1>
+            <p><a href="">about us</a></p>
+            <p><a href="">contact us</a></p>
+            <p><a href="">we are hiring</a></p>
+            <p><a href="">blog</a></p>
+        </div>
+        <div class="footer-content-three">
+            <h1>feature</h1>
+            <p>busnies marketing</p>
+            <p>user anslystic</p>
+            <p>live chat</p>
+            <p>unlimited support</p>
+        </div>
+    </div>
+    <!--End make footer-->
+        <!-- end make content of home page -->
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+           /////////////////////////////////get inbody  api /////////////////////////////////////
+    let userId = localStorage.getItem("user"); 
+    let iduser = JSON.parse(userId).id
+    let token = JSON.parse(userId).token
+    
+function fetchData(id) {
+    const url = `https://graduation-project-2q7g.onrender.com/api/v1/user/${id}/mbody`;
+    let protin_year = document.getElementById("protin_year");
+    let calory_year = document.getElementById("calory_year");
+    let carb_year = document.getElementById("carb_year");
+    let planyear =document.getElementById("planyear");
+    
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      protin_year.innerHTML = data.data.weight*2;
+      let age = data.data.age;
+      let fat = data.data.fat;
+      let height=data.data.height;
+      let weight =data.data.weight;
+      calory_year.innerHTML = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+      carb_year.innerHTML = data.data.weight*4;
+      if(age>=20 && weight<=50){
+        planyear.innerHTML = "Bulking Up To Gain Weight";
+      }else if(height-100<weight){
+        planyear.innerHTML = "Bulking Up To Gain Weight";
+      }
+      else if(weight>100 && fat>20){
+        planyear.innerHTML = "drying to lose weight";
+      }
+      else if(weight>130){
+        planyear.innerHTML = "drying to lose weight";
+      }
+    })
+    .catch(error => {
+      console.error('There has been a problem with your fetch operation:', error);
+    });
+  }
+
+  // إضافة مستمع للحدث للزر
+  document.getElementById('fetchDataButton').addEventListener('click', function() {
+    fetchData(iduser);
+  });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../file.js"></script>
+</body>
+
+</html>
