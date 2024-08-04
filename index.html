@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness & Feeding System</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+   
+    <!---div content all pages-->
+    <div id="container">
+        <!--logo and title-->
+        <form action="" method="post">
+            <div id="signpage">
+                <div class="logo">
+                    <div class="logo-img"><img src="images/dambel.png" alt="Error in load photo" width="70px"
+                            height="70px">
+                    </div>
+                    <div class="title">fitness & feeding system</div>
+                </div>
+                <!--box to sign in and sign up-->
+                <div id="signin-box">
+                    <div id="content-signheader">
+                        <div id="sign-header1">
+                            <p style="margin-bottom: 10px;">welcome to <span id="backuser">Fitness & Feeding</span>
+                            </p>
+                            <div class="sign-title">log in</div>
+                        </div>
+                        <div id="signheader2">
+                            <p class="noacount">No Acount?</p>
+                            <a href="pages/signup-page.html">sign up</a>
+                        </div>
+                    </div>
+                    <!--google face log in-->
+                    <div id="sign-with">
+                        <a href="" class="googletext" target="_blank"><img src="images/google.png"
+                                alt="Error in load photo" width="40px" height="40px" id="google"> Sign With Google </a>
+                        <a href="" target="_blank"><i class="fa-brands fa-facebook" id="face"></i></a>
+                        <!-- <a href="" target="_blank"><i class="fa-brands fa-apple" id="apple"></i></a> -->
+                    </div>
+                    <!--end sign with-->
+                    <!--make log in fields-->
+                    <form action="/" method="post">
+                        <div class="sign-input">
+                            <label for="username" class="name">Enter your username or email address</label>
+                            <br>
+                            <input type="text" id="username" placeholder="Username or Email address">
+                            <br>
+                            <label for="password" class="pass">Enter your password</label>
+                            <br>
+                            <input type="password" id="password" placeholder="Enter youe password">
+                            <a href="/pages/forgetpassword.html" class="forget">Forget passsword</a>
+                            <br>
+                            <div class="ssubmit">
+                                <!-- <a href="" target="_parent"> -->
+                                    <button type="button" id="submit" onclick="btnlogin()" >log in</button>
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </form>
+        <!--end the sign in pade-->
+        
+    </div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="file.js"></script>
+</body>
+
+</html>
