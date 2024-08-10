@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/master.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <title>vitamines</title>
+    <style>
+        /* all rules for page */
+        * {
+           box-sizing: border-box;
+       }
+
+       :root {
+           --mainColor: yellow;
+       }
+
+       body {
+           background-color: #1c1c1e;
+       }
+
+       /* /////////////////// */
+       /* head select page */
+       .container {
+           padding: 0 30px;
+           margin-left: auto;
+           margin-right: auto;
+           margin-top: 30px;
+
+       }
+       .head-page-trining {
+           width: auto !important;
+           margin: auto;
+           background-color: #4d4d4d;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           border-radius: 12px;
+           gap: 18px;
+           color: #ffffff;
+           margin-bottom: 80px;
+       }
+
+       .active-page-trining {
+           background-color: var(--mainColor);
+           color: black;
+       }
+
+       .head-page-trining div {
+           padding: 7px 19px;
+           border-radius: 6px;
+       }
+
+       .head-page-trining div a {
+           text-decoration: none;
+           color: inherit;
+       }
+      
+       .container{
+          width: 850px;
+           margin: auto;
+           color: white;
+           margin-top: 50px;
+       }
+       
+       .box-info{
+           margin-bottom: 30px;
+       }
+       
+       .head-ask{
+           color: yellow;
+           text-decoration: underline;
+           margin-bottom: 15px;
+           font-weight: bold;
+       }
+       
+       .answer{
+           background-color: #484343;
+           border-radius: 6px;
+       }
+       
+       .answer p{
+           padding: 20px;
+       }
+       
+       @media (max-width: 991px) {
+           .container{
+               width: 100%;
+              
+           }
+       }
+       
+         span{
+             display: block;
+         }
+   </style>
+</head>
+<body>
+    <!-- start header all page -->
+    <div class="container-tips" id="container-tips">
+        <!-- start make header -->
+        <div class="header-home">
+            <div class="logo-home">
+                <img src="../images/dambel.png" class="home-logo" alt="Error in photo">
+            </div>
+            <div class="title-home">
+                Fitness & Feeding
+            </div>
+            <a href="/pages/home-page.html" class="link-home">Home</a>
+            <a href="service-page.html" class="link-home">Service</a>
+            <a href="plans-page.html" class="link-home">Plans</a>
+            <a href="/pages/about.html" class="link-home">About</a>
+            <a href="/pages/Profile.html" class="link-home">profile</a>
+            <button class="sign-home" onclick="iconfirm()">Log Out</button>
+        </div>
+        <!-- end make header -->
+    <div class="container">
+        <div class="head-page-trining">
+            <div><a href="/pages/sup-zink.html">zink</a></div>
+            <div><a href="/pages/sup-protin.html">protin</a></div>
+            <div ><a href="/pages/sup-creatine.html">creatine</a></div>
+            <div><a href="/pages/sup-multivitamins.html">vitamines explanation</a></div>
+            <div class="active-page-trining"><a href="/pages/sup-adv-vitamine.html">advanced vitamines</a></div>
+            
+        </div>
+        <div class="box-info">
+            <h3 class="head-ask">Advantages of Optimum Nutrition Opti Multivitamin</h3>
+            <div class="answer">
+                <p>
+                    <span>1-Contains 8 essential amino acids</span>
+                    <span>2-It forms the basic building block for muscle growth</span>
+                    <span>3-Enhancing sexual ability because it contains 8 concentrates</span>
+                    <span>4-Protection against prostate enlargement</span>
+                    <span>5-Supports erection strength</span>
+                    <span>6-Improving sperm capacity and increasing their number</span>
+                    <span>7-Strengthening the immune system</span>
+                    <span>8-Contains more than 20 antioxidants from vegetable and fruit concentrates </span>
+                    <span>9-It includes 3 
+                        .enzymes designed to increase and accelerate the absorption process.</span>
+                    <span>It contains 25 essential vitamins and minerals and B vitamins</span>
+                </p>
+            </div>
+        </div>   
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../file.js"></script>
+</body>
+</html>

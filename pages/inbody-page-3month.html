@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness & Feeding / Inbody3month</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+
+<body>
+    <div class="container-inbody" id="container-inbody">
+        <!-- start make header -->
+        <div class="header-home">
+            <div class="logo-home">
+                <img src="../images/dambel.png" class="home-logo" alt="Error in photo">
+            </div>
+            <div class="title-home">
+                Fitness & Feeding
+            </div>
+            <a href="/pages/home-page.html" class="link-home">Home</a>
+            <a href="service-page.html" class="link-home">Service</a>
+            <a href="plans-page.html" class="link-home">Plans</a>
+            <a href="/pages/about.html" class="link-home">About</a>
+            <a href="/pages/Profile.html" class="link-home">profile</a>
+            <button class="sign-home" onclick="iconfirm()">Log Out</button>
+        </div>
+        <!-- end make header -->
+        <!-- start content -->
+        <div class="inbody-form">
+            <h1>Enter your information.......</h1>
+            <form id="inbodyForm">
+                <div class="form-div">
+                    <div>
+                        <label for="in-age">AGE</label>
+                        <br>
+                        <input type="number" id="in-age" placeholder="Enter your age">
+                    </div>
+                    <div>
+                        <label for="in-weight">WEIGHT (Required)</label>
+                        <br>
+                        <input type="number" required id="in-weight" placeholder="Enter your weight">
+                    </div>
+                    <div>
+                        <label for="in-height">HEIGHT (Required)</label>
+                        <br>
+                        <input type="number" required id="in-height" placeholder="Enter your height">
+                    </div>
+                    <div>
+                        <label for="in-fat">FAT% (If Available)</label>
+                        <br>
+                        <input type="number" id="in-fat" placeholder="Enter percentage Fat">
+                    </div>
+                    <div>
+                        <label for="in-water">WATER %</label>
+                        <br>
+                        <input type="number" id="in-water" placeholder="Enter percentage water">
+                    </div>
+                    <div>
+                        <label for="in-muscle">MUSCLE %</label>
+                        <br>
+                        <input type="number" id="in-muscle" placeholder="Enter percentage muscle">
+                    </div>
+                    <div>
+                        <label for="in-bmr">BMR (kcal)</label>
+                        <br>
+                        <input type="number" id="in-bmr" placeholder="Enter your BMR">
+                    </div>
+                    <div>
+                        <button type="button" id="btn_inbody">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../file.js"></script>
+    <script>
+        document.getElementById('btn_inbody').addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            const age = document.getElementById('in-age').value;
+            const weight = document.getElementById('in-weight').value;
+            const height = document.getElementById('in-height').value;
+            const fat = document.getElementById('in-fat').value;
+            const water = document.getElementById('in-water').value;
+            const muscle = document.getElementById('in-muscle').value;
+            const bmr = document.getElementById('in-bmr').value;
+            const gender = "male"
+            const userId = localStorage.getItem("user"); 
+            const id = JSON.parse(userId).id
+            const token = JSON.parse(userId).token
+            
+            console.log(JSON.parse(userId))
+            const requestBody = {
+                age: age,
+                weight: weight,
+                height: height,
+                fat_percentage: fat,
+                water_percentage: water,
+                muscle_percentage: muscle,
+                bmr: bmr,
+                userId: id,
+                gender
+            };
+
+            const apiUrl = 'https://graduation-project-2q7g.onrender.com/api/v1/mbody';
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                const responseData = await response.json();
+
+                if (response.ok) {
+                        setTimeout(() => {
+                            location.replace("../pages/private-home_3month.html");
+                        }, 3000);
+                        Swal.fire('Success', 'Data submitted successfully!', 'success');
+                   
+                } else {
+                    Swal.fire('Error', responseData.message || 'Failed to submit data!', 'error');
+                    console.error('Error submitting data:', responseData);
+                }
+            } catch (error) {
+                Swal.fire('Error', 'Failed to submit data!', 'error');
+                console.error('Error submitting data:', error);
+            }
+        });
+///////////////////////////////////////////////////////////////////////////////////////////////////
+    </script>
+</body>
+
+</html>
